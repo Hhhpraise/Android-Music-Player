@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="10dp"
+    android:id="@+id/cardOpen"
+    android:layout_marginStart="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ColorDefaultNote"
+        android:padding="8dp"
+        ><androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="5dp"
+        android:id="@+id/cardmm">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imgSongg"
+            android:scaleType="centerCrop"
+            android:src="@drawable/music"
+            android:background="@drawable/list_bg"/>
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtSongN"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/play"
+            android:layout_toEndOf="@id/cardmm"
+            android:textColor="@color/ColorWhiteNote"
+            android:padding="6dp"
+            android:gravity="center_vertical"
+            android:text="Song Name"
+            android:textSize="16dp"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:maxLines="1"
+            />
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/ic_next"
+           android:id="@+id/next"
+           android:elevation="10dp"
+           android:layout_marginRight="15dp"
+           android:layout_alignParentEnd="true"
+           android:layout_centerVertical="true"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            app:fabSize="mini"
+            android:id="@+id/play"
+            android:elevation="10dp"
+            android:backgroundTint="@color/white"
+            android:layout_toStartOf="@id/next"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtSongNArtist"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/play"
+            android:layout_toEndOf="@id/cardmm"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_below="@id/txtSongN"
+            android:gravity="center_vertical"
+            android:text="Artist Name"
+            android:textSize="12dp"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:maxLines="1"
+            />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
